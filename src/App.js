@@ -5,8 +5,12 @@ import './App.css';
 
 import RemoteConsumer from './components/RemoteConsumer';
 
-class App extends Component {
-
+function App () {
+  
+  return(
+  <RemoteConsumer url="https://reqres.in/api/users" />
+  );
+/*
   state = {
     users: []
   }
@@ -32,7 +36,7 @@ class App extends Component {
       return <div className="container loading-panel">Loading...</div>
     }
 
-  }
+  }*/
 }
 
 export default App;
