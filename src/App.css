@@ -38,8 +38,21 @@
 }
 
 /*** Custom CSS ***/
+.loading-panel{
+  text-align: center;
+}
 
-.users-panel{
-  width: 600px;
-  margin: auto;
+.card {
+  margin-bottom: 0.5em;
+}
+
+.card-title, .card-email{
+  display: flex;
+  align-items: center;
+}
+
+.card-avatar img{
+  width: 100%;
+  max-width: 128px;
+  border-radius: 5px;
 }

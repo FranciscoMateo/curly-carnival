@@ -21,11 +21,17 @@ class App extends Component {
   }
 
   render (){
-    return (
-      <div className="App">
-        <RemoteConsumer users={this.state.users} />
-      </div>
-    );
+
+    if (this.state.users.length > 0) {
+      return (
+        <div className="app container">
+          <RemoteConsumer users={this.state.users} />
+        </div>
+      )
+    } else {
+      return <div className="container loading-panel">Loading...</div>
+    }
+
   }
 }
 
