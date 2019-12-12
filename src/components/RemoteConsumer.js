@@ -4,12 +4,9 @@ import User from './User';
 
 function RemoteConsumer (props){ 
 
-  const [data, loading] = useFetch(
-    "https://reqres.in/api/users"
-  );
+  const [data, loading] = useFetch(props.url);
   return (
     <>
-      
       {loading ? (
         <div className="loading-panel">Loading...</div>
       ) : (
