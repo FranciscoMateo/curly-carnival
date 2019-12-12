@@ -1,25 +1,22 @@
 import React from 'react';
 import { useFetch } from "./UseFetch";
+import User from './User';
 
 function RemoteConsumer (props){ 
-
 
   const [data, loading] = useFetch(
     "https://reqres.in/api/users"
   );
   return (
     <>
-      <h1>Users</h1>
+      
       {loading ? (
-        "Loading..."
+        <div className="loading-panel">Loading...</div>
       ) : (
-        <ul>
-          {data.data.map(({ id, first_name, email }) => (
-            <li key={id}>
-              {first_name} {email}
-            </li>
-          ))}
-        </ul>
+
+        <div className="app container">
+          <User users={data.data} />
+        </div>
       )}
     </>
   );
